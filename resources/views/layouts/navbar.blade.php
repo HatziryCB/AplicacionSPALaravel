@@ -10,7 +10,7 @@
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Inicio</a>
                     <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                    <a href="{{route('crear.cita')}}" class="nav-item nav-link">Servicios</a>
+                    <a href="{{route('citas.index')}}" class="nav-item nav-link">Servicios</a>
                     <a href="price.html" class="nav-item nav-link">Precios</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Información</a>
