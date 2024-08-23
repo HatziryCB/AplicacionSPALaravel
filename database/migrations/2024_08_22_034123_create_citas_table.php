@@ -15,7 +15,7 @@ class CreateCitasTable extends Migration
             $table->foreignId('servicio_id')->constrained()->onDelete('cascade');
             $table->date('fecha');
             $table->time('hora');
-            $table->decimal('total_a_pagar', 8, 2);
+            $table->decimal('total', 8, 2);
             $table->string('metodo_pago');
             $table->timestamps();
         });

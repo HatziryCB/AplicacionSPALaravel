@@ -23,9 +23,13 @@ class ServicioController extends Controller
         //
     }
 
-    public function show(Servicio $servicio)
+    public function show($id)
     {
-        //
+        // Obtener un servicio por su ID
+        $servicio = Servicio::findOrFail($id);
+
+        // Retornar la vista y pasar el servicio
+        return view('servicios.show', compact('servicio'));
     }
 
     public function edit(Servicio $servicio)

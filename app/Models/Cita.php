@@ -13,7 +13,7 @@ class Cita extends Model
         'servicio_id',
         'fecha',
         'hora',
-        'total_a_pagar',
+        'total',
         'metodo_pago'];
 
     public function cliente()

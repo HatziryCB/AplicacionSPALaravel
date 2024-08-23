@@ -34,14 +34,18 @@ class CitaController extends Controller
         // Validar los datos del formulario
         $request->validate([
             'cliente_id' => 'required',
+            'empleado_id' => 'required',
             'servicio_id' => 'required',
             'fecha' => 'required|date',
             'hora' => 'required',
+            'metodo_pago' => 'required',
+            'total' => 'required|numeric',
         ]);
 
         // Crear una nueva cita
         Cita::create([
             'cliente_id' => $request->cliente_id,
+            'empleado_id' => $request->empleado_id,
             'servicio_id' => $request->servicio_id,
             'fecha' => $request->fecha,
             'hora' => $request->hora,
