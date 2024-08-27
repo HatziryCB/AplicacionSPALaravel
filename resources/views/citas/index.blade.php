@@ -8,10 +8,9 @@
                 <form action="{{ route('citas.store') }}" method="POST">
                     @csrf
                     <div class="form-row">
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="cliente_id text-white">Cliente</label>
-                                <select name="cliente_id" id="cliente_id" class="form-control" required>
+                                <select name="cliente_id" id="cliente_id" class="form-control bg-transparent" required>
                                     <option value="">Selecciona un cliente</option>
                                     @foreach($clientes as $cliente)
                                         <option value="{{ $cliente->id }}">{{ $cliente->nombre }}</option>
@@ -19,10 +18,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-md-8">
                             <div class="form-group">
-                                <label for="servicio_id">Servicios a Realizar: </label>
-                                <select name="servicios[]" id="servicio_id" class="form-control" multiple required>
+                                <select name="servicios[]" id="servicio_id" class="form-control bg-transparent" multiple required>
                                     <option value="">Selecciona uno o más servicios</option>
                                     @foreach($servicios as $servicio)
                                         <option value="{{ $servicio->id }}">{{ $servicio->nombre }}</option>
@@ -32,10 +30,9 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-3">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="empleado_id">Especialista</label>
-                                <select name="empleado_id" id="empleado_id" class="form-control" required>
+                                <select name="empleado_id" id="empleado_id" class="form-control bg-transparent" required>
                                     <option value="">Especialista...</option>
                                     @foreach($empleados as $empleado)
                                         <option value="{{ $empleado->id }}">{{ $empleado->nombre }}</option>
@@ -43,28 +40,24 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="fecha">Fecha</label>
-                                <input type="date" name="fecha" id="fecha" class="form-control" required>
+                                <input type="date" name="fecha" id="fecha" class="form-control bg-transparent" required>
                             </div>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-md-2">
                             <div class="form-group">
-                                <label for="hora">Hora</label>
-                                <input type="time" name="hora" id="hora" class="form-control" required>
+                                <input type="time" name="hora" id="hora" class="form-control bg-transparent" required>
                             </div>
                         </div>
-                        <div class="col-sm-1">
+                        <div class="col-md-1">
                             <div class="form-group">
-                                <label for="total_a_pagar">Total</label>
-                                <input type="number" name="total" id="total" class="form-control" readonly required>
+                                <input type="number" name="total" id="total" class="form-control bg-transparent" readonly required>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="metodo_pago">Método de Pago</label>
-                                <select name="metodo_pago" id="metodo_pago" class="form-control" required>
+                                <select name="metodo_pago" id="metodo_pago" class="form-control bg-transparent" required>
                                     <option value="Efectivo">Efectivo</option>
                                     <option value="Tarjeta">Tarjeta débito/crédito</option>
                                 </select>
