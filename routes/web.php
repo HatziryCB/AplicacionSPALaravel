@@ -18,3 +18,8 @@ use App\Http\Controllers\ServicioController;
 
 Route::get('/servicios', [ServicioController::class, 'index'])->name('servicios.index');
 Route::get('/servicios/{id}', [ServicioController::class, 'show'])->name('servicios.show');
+
+use App\Http\Controllers\ClienteController;
+Route::resource('clientes', ClienteController::class);
+Route::get('/cliente/crear', [ClienteController::class, 'create'])->name('clientes.create');
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');

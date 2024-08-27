@@ -30,10 +30,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="resources/css/style.css" rel="stylesheet">
+    <link href="resources/js/main.js" rel="stylesheet">
 </head>
 <body>
 @include('layouts.navbar')
-<div class="container mt-4">
+<div class="container my-4">
     @yield('content')
 </div>
 </body>

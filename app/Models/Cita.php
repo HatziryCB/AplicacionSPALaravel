@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cita extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'cliente_id',
         'empleado_id',
@@ -14,21 +16,24 @@ class Cita extends Model
         'fecha',
         'hora',
         'total',
-        'metodo_pago'];
+        'metodo_pago',
+    ];
 
+    // Relación con Cliente
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class,'cliente_id');
+        return $this->belongsTo(Cliente::class);
     }
 
+    // Relación con Empleado
     public function empleado()
     {
-        return $this->belongsTo(Empleado::class,'empleado_id');
+        return $this->belongsTo(Empleado::class);
     }
 
-    public function servicio()
+    // Relación con Servicio
+    public function servicios()
     {
-        return $this->belongsTo(Servicio::class,'servicio_id');
+        return $this->belongsToMany(Servicio::class, 'cita_servicio');
     }
 }
-

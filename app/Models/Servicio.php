@@ -2,15 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Servicio extends Model
 {
-    protected $fillable = ['nombre', 'descripcion', 'precio', 'duracion'];
+    use HasFactory;
+
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'precio',
+        'duracion'
+    ];
 
     public function citas()
     {
-        return $this->belongsToMany(Cita::class);
+        return $this->belongsToMany(Cita::class, 'cita_servicio');
     }
 }
+
 

@@ -31,31 +31,39 @@ class CitaController extends Controller
 
     public function store(Request $request)
     {
-        // Validar los datos del formulario
         $request->validate([
             'cliente_id' => 'required',
             'empleado_id' => 'required',
-            'servicio_id' => 'required',
             'fecha' => 'required|date',
             'hora' => 'required',
+            'servicios' => 'required|array',
             'metodo_pago' => 'required',
-            'total' => 'required|numeric',
         ]);
 
-        // Crear una nueva cita
-        Cita::create([
+        // Crear la cita
+        $cita = Cita::create([
             'cliente_id' => $request->cliente_id,
             'empleado_id' => $request->empleado_id,
-            'servicio_id' => $request->servicio_id,
             'fecha' => $request->fecha,
             'hora' => $request->hora,
             'metodo_pago' => $request->metodo_pago,
-            'total' => $request->total,
         ]);
 
-        // Redirigir a una página
-        return redirect()->route('citas.index')->with('success', 'Cita creada con éxito');
+        // Calcular el total y asociar servicios a la cita
+        $total = 0;
+        foreach ($request->servicios as $servicio_id) {
+            $servicio = Servicio::find($servicio_id);
+            $total += $servicio->precio;
+
+            $cita->servicios()->attach($servicio_id);
+        }
+
+        // Actualizar el total en la cita
+        $cita->update(['total' => $total]);
+
+        return redirect()->route('citas.index')->with('success', 'Cita creada exitosamente.');
     }
+
 
     public function show(Cita $cita)
     {
