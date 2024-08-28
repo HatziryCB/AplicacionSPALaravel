@@ -82,7 +82,7 @@
                 <div class="navbar-nav m-auto py-0">
                     <a href="{{url('/')}}" class="nav-item nav-link">Inicio</a>
                     <a href="" class="nav-item nav-link">Nosotros</a>
-                    <a href="{{route('servicios.index')}}" class="nav-item nav-link">Servicios</a>
+                    <a href="" class="nav-item nav-link">Servicios</a>
                     <a href="{{route('citas.index')}}" class="nav-item nav-link">Citas</a>
                     <a href="" class="nav-item nav-link">Contacto</a>
                     <div class="nav-item dropdown">

@@ -31,38 +31,28 @@ class CitaController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'cliente_id' => 'required',
-            'empleado_id' => 'required',
-            'fecha' => 'required|date',
-            'hora' => 'required',
-            'servicios' => 'required|array',
-            'metodo_pago' => 'required',
-        ]);
-
-        // Crear la cita
-        $cita = Cita::create([
-            'cliente_id' => $request->cliente_id,
-            'empleado_id' => $request->empleado_id,
-            'fecha' => $request->fecha,
-            'hora' => $request->hora,
-            'metodo_pago' => $request->metodo_pago,
-        ]);
-
-        // Calcular el total y asociar servicios a la cita
         $total = 0;
-        foreach ($request->servicios as $servicio_id) {
-            $servicio = Servicio::find($servicio_id);
-            $total += $servicio->precio;
+        $serviciosSeleccionados = $request->input('servicios', []);
 
-            $cita->servicios()->attach($servicio_id);
+        foreach ($serviciosSeleccionados as $servicioId) {
+            $servicio = Servicio::find($servicioId);
+            $total += $servicio->precio;
         }
 
-        // Actualizar el total en la cita
-        $cita->update(['total' => $total]);
+        // Guardar la cita y el total
+        $cita = new Cita();
+        $cita->cliente_id = $request->input('cliente_id');
+        $cita->empleado_id = $request->input('empleado_id');
+        $cita->fecha = $request->input('fecha');
+        $cita->hora = $request->input('hora');
+        $cita->total = $total;
+        $cita->save();
 
-        return redirect()->route('citas.index')->with('success', 'Cita creada exitosamente.');
+        $cita->servicios()->attach($serviciosSeleccionados);
+
+        return redirect()->route('citas.index')->with('success', 'Cita creada correctamente.');
     }
+
 
 
     public function show(Cita $cita)

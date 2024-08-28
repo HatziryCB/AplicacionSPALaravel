@@ -15,7 +15,7 @@ Route::get('/citas', [CitaController::class, 'index'])->name('citas.index');
 Route::post('/citas', [CitaController::class, 'store'])->name('citas.store');
 
 use App\Http\Controllers\ServicioController;
-
+Route::resource('servicios', ServicioController::class);
 Route::get('/servicios', [ServicioController::class, 'index'])->name('servicios.index');
 Route::get('/servicios/{id}', [ServicioController::class, 'show'])->name('servicios.show');
 

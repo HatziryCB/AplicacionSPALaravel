@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center bg-appointment mx-0">
         <div class="col-lg-8 py-5">
-            <div class="p-5 my=5" style="background: rgba(33,30,28,0.7)">
+            <div class="p-5 my=5" style="background: rgba(112,158,31,0.5)">
                 <h1 class="text-white text-center mb-4">Agendar Cita</h1>
                 <form action="{{ route('citas.store') }}" method="POST">
                     @csrf
@@ -20,10 +20,11 @@
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <select name="servicios[]" id="servicio_id" class="form-control bg-transparent" multiple required>
-                                    <option value="">Selecciona uno o más servicios</option>
+                                <select name="servicios[]" class="form-control servicio-select bg-transparent" multiple>
                                     @foreach($servicios as $servicio)
-                                        <option value="{{ $servicio->id }}">{{ $servicio->nombre }}</option>
+                                        <option value="{{ $servicio->id }}" data-precio="{{ $servicio->precio }}">
+                                            {{ $servicio->nombre }} - Q{{ $servicio->precio }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -69,15 +70,30 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
     <script>
-        document.getElementById('servicio_id').addEventListener('change', function () {
-            let selectedOptions = Array.from(this.selectedOptions);
-            let total = 0;
-            selectedOptions.forEach(option => {
-                let precio = option.getAttribute('data-precio');
-                total += parseFloat(precio);
+        document.addEventListener('DOMContentLoaded', function () {
+            const servicioSelect = document.querySelectorAll('.servicio-select');
+            const totalField = document.getElementById('total');
+
+            servicioSelect.forEach(select => {
+                select.addEventListener('change', calcularTotal);
             });
-            document.getElementById('total').value = total;
+
+            function calcularTotal() {
+                let total = 0;
+
+                servicioSelect.forEach(select => {
+                    Array.from(select.selectedOptions).forEach(option => {
+                        total += parseFloat(option.getAttribute('data-precio'));
+                    });
+                });
+
+                totalField.value = `Q${total.toFixed(2)}`;
+            }
         });
+
     </script>
 @endsection

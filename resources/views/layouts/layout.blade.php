@@ -29,8 +29,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="resources/css/style.css" rel="stylesheet">
-    <link href="resources/js/main.js" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/main.js') }}"></script>
 </head>
 <body>
 @include('layouts.navbar')
