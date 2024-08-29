@@ -31,6 +31,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('js/main.js') }}"></script>
+
 </head>
 <body>
 @include('layouts.navbar')
