@@ -10,24 +10,24 @@
 <div class="form-row">
     <div class="col-sm-6">
         <div class="form-group">
-            <input type="text" name="nombre" class="form-control bg-transparent p-4" placeholder="Nombre" required="required" />
+            <input type="text" name="nombre" class="form-control bg-transparent p-4 text-white" placeholder="Nombre" required="required" />
         </div>
     </div>
     <div class="col-sm-6">
         <div class="form-group">
-            <input type="email" name="email" class="form-control bg-transparent p-4" placeholder="Email" required="required" />
+            <input type="email" name="email" class="form-control bg-transparent p-4 text-white" placeholder="Email" required="required" />
         </div>
     </div>
 </div>
 <div class="form-row">
     <div class="col-sm-6">
         <div class="form-group">
-            <input type="text" name="telefono" class="form-control bg-transparent p-4" placeholder="Teléfono" required="required" />
+            <input type="text" name="telefono" class="form-control bg-transparent p-4 text-white" placeholder="Teléfono" required="required" />
         </div>
     </div>
     <div class="col-sm-6">
         <div class="form-group">
-            <input type="text" name="direccion" class="form-control bg-transparent p-4" placeholder="Dirección" required="required" />
+            <input type="text" name="direccion" class="form-control bg-transparent p-4 text-white" placeholder="Dirección" required="required" />
         </div>
     </div>
 </div>

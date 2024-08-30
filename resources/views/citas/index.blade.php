@@ -69,21 +69,25 @@
 @section('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const servicioSelect = document.querySelector('.servicio-select');
+            const servicioSelect = document.querySelectorAll('.servicio-select');
             const totalField = document.getElementById('total');
 
-            servicioSelect.addEventListener('change', calcularTotal);
+            servicioSelect.forEach(select => {
+                select.addEventListener('change', calcularTotal);
+            });
 
             function calcularTotal() {
                 let total = 0;
-
-                Array.from(servicioSelect.selectedOptions).forEach(option => {
-                    total += parseFloat(option.getAttribute('data-precio'));
+                servicioSelect.forEach(select => {
+                    Array.from(select.selectedOptions).forEach(option => {
+                        total += parseFloat(option.getAttribute('data-precio'));
+                    });
                 });
 
-                totalField.value = `Q${total.toFixed(2)}`;
+                totalField.value = total;
             }
         });
+
     </script>
 @endsection
 

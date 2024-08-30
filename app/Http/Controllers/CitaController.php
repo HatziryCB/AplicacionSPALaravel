@@ -35,33 +35,35 @@ class CitaController extends Controller
             'cliente_id' => 'required|exists:clientes,id',
             'empleado_id' => 'required|exists:empleados,id',
             'fecha' => 'required|date',
-            'hora' => 'required|date_format:H:i',
+            'hora' => 'required',
             'servicios' => 'required|array',
             'servicios.*' => 'exists:servicios,id',
         ]);
 
-        // Cálculo del total
         $total = 0;
+
+        // Calcular el total
         foreach ($validatedData['servicios'] as $servicioId) {
-            $servicio = Servicio::findOrFail($servicioId);
-            $total += $servicio->precio;
+            $servicio = Servicio::find($servicioId);
+            if ($servicio) {
+                $total += $servicio->precio;
+            }
         }
 
-        // Crear la cita
-        $cita = new Cita();
-        $cita->cliente_id = $validatedData['cliente_id'];
-        $cita->empleado_id = $validatedData['empleado_id'];
-        $cita->fecha = $validatedData['fecha'];
-        $cita->hora = $validatedData['hora'];
-        $cita->total = $total;  // Guardar el total en la base de datos
-        $cita->save();
+        // Crear la cita y guardar el total
+        $cita = Cita::create([
+            'cliente_id' => $validatedData['cliente_id'],
+            'empleado_id' => $validatedData['empleado_id'],
+            'fecha' => $validatedData['fecha'],
+            'hora' => $validatedData['hora'],
+            'total' => $total, // Se almacena el total calculado
+        ]);
 
-        // Guardar los servicios en la tabla
+        // Guardar los servicios seleccionados
         $cita->servicios()->attach($validatedData['servicios']);
 
-        return redirect()->route('citas.index')->with('success', 'Cita agendada con éxito.');
+        return redirect()->route('citas.index')->with('success', 'Cita creada exitosamente.');
     }
-
 
     public function show(Cita $cita)
     {

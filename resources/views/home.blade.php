@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Carrusel -->
-    <div class="container-fluid p-0 mb-5 pb-5">
+    <div class="container-fluid p-0 mb-4 pb-4">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
@@ -21,9 +21,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Diseño de cejas</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -32,9 +32,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Facial Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Tratamientos faciales</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Laminado de cejas</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -54,9 +54,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Manicura</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -65,9 +65,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Maquillaje Profesional</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -76,9 +76,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Masajes</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
@@ -87,9 +87,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">May Studio Salon</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Tintura de cejas</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="{{route('citas.index')}}">Agendar cita</a>
                         </div>
                     </div>
                 </div>
