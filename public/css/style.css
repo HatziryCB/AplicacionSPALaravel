@@ -3495,8 +3495,8 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -3648,7 +3648,7 @@ input[type="button"].btn-block {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #7a0808;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
   border: 1px solid #ced4da;
@@ -9633,17 +9633,17 @@ h6,
 }
 
 .bg-appointment {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/images/cejas.jpg?9a84c51cfb8b36f202433d69eab315f5), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/cejas.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-pricing {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/images/masaje.jpg?152cce96ac10d10ce0126fc6db328e9c), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/masaje.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-jumbotron {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/images/mascarilla.jpg?5e8fd1bf90dab7959aa490d964e67cb9), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/mascarilla.jpg), no-repeat center center;
   background-size: cover;
 }
 

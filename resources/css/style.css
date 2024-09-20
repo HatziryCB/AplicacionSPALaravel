@@ -3484,7 +3484,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -9599,17 +9599,17 @@ h6,
 }
 
 .bg-appointment {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../../../../../../laragon/www/BeautySalon/public/img/cejas.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/cejas.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-pricing {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../../../../../../laragon/www/BeautySalon/public/img/masaje.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/masaje.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-jumbotron {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../../../../../../laragon/www/BeautySalon/public/img/mascarilla.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(/img/mascarilla.jpg), no-repeat center center;
   background-size: cover;
 }
 
