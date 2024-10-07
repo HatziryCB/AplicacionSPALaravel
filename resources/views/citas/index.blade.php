@@ -5,7 +5,7 @@
 @section('content')
     <div class="row justify-content-center bg-appointment mx-0">
         <div class="col-lg-8 py-5">
-            <div class="p-5 my=5" style="background: rgba(33, 30, 28, 0.7);">
+            <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
                 <h1 class="text-white text-center mb-4">Agendar Cita</h1>
                 <form action="{{ route('citas.store') }}" method="POST">
                     @csrf

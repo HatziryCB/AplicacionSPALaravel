@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-
     public function index()
     {
-        //
+        return view('cliente.index');
     }
 
     public function create()
@@ -43,12 +42,12 @@ class ClienteController extends Controller
     }
 
 
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request, $id)
     {
         //
     }
 
-    public function destroy(Cliente $cliente)
+    public function destroy($id)
     {
         //
     }

@@ -76,13 +76,17 @@ class CitaController extends Controller
         //
     }
 
-    public function update(Request $request, Cita $cita)
+    public function update(Request $request, $id)
     {
-        //
+        $cita = Cita::findOfFail($id);
+        $cita->update($request->all());
+        return response()->json(['message' => 'Cita actualizada exitosamente.']);
     }
 
-    public function destroy(Cita $cita)
+    public function destroy($id)
     {
-        //
+        $cita = Cita::findOrFail($id);
+        $cita->delete();
+        return response()->json(['message' => 'Cita eliminada exitosamente.']);
     }
 }

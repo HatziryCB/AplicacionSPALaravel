@@ -4,7 +4,7 @@
 
 @section('content')
     <div id="carousel">
-        <carrousel></carrousel>
+        <carousel></carousel>
     </div>
     <div id="footer">
         <footer></footer>

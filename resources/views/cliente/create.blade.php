@@ -33,11 +33,12 @@
 </div>
 <div class="form-row">
     <div class="col-sm-12">
-        <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Registrar Cliente</button>
+        <button class="btn btn-outline-primary btn-block" type="submit" style="height: 47px;">Registrar</button>
     </div>
 </div>
 </form>
 </div>
 </div>
 </div>
+
 @endsection
